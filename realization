@@ -1,0 +1,25 @@
+from abc import ABC, abstractmethod
+
+# 1. The Interface (Contract)
+class PaymentProcessor(ABC):
+    
+    @abstractmethod
+    def process_payment(self, amount: float):
+        """Every payment processor must implement this method."""
+        pass
+
+# 2. The Realization (Implementation)
+class PayPalProcessor(PaymentProcessor):
+    
+    def process_payment(self, amount: float):
+        return f"Processing ${amount} via PayPal."
+
+class StripeProcessor(PaymentProcessor):
+    
+    def process_payment(self, amount: float):
+        return f"Processing ${amount} via Stripe."
+
+# Usage:
+# processor = PaymentProcessor()  # Error! Cannot instantiate abstract class
+paypal = PayPalProcessor()        # Valid realization
+print(paypal.process_payment(50.0))
