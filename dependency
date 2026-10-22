@@ -1,0 +1,15 @@
+class Car:
+    def start_engine(self):
+        return "Engine started Vroom!"
+
+class Driver:
+    # Dependency: The Car is passed into the method temporarily, 
+    # not saved as a permanent attribute of the Driver.
+    def drive(self, car: Car):
+        return car.start_engine()
+
+# Test it
+my_car = Car()
+driver = Driver()
+
+print(driver.drive(my_car))  # Output: Engine started Vroom!
