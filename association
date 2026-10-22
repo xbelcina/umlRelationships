@@ -1,7 +1,8 @@
-public class Department {
-    private List<Employee> employees;
-}
+class Department:
+    def __init__(self, name):
+        self.name = name
 
-public class Employee {
-    private Department department;
-}
+class Professor:
+    def __init__(self, name, department):
+        self.name = name
+        self.department = department  # Association with Department
