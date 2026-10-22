@@ -1,0 +1,10 @@
+class Animal:  # Parent / Superclass
+    def __init__(self, name):
+        self.name = name
+
+    def make_sound(self):
+        pass
+
+class Dog(Animal):  # Child / Subclass (Inherits from Animal)
+    def make_sound(self):
+        return "Bark"
