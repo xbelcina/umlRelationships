@@ -1,0 +1,8 @@
+class Room:
+    def __init__(self, room_type):
+        self.room_type = room_type
+
+class House:
+    def __init__(self):
+        # Composition: Rooms are created inside the House and belong strictly to it
+        self.rooms = [Room("Living Room"), Room("Kitchen")]
