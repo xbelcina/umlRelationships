@@ -1,0 +1,7 @@
+public class Department {
+    private List<Employee> employees;
+}
+
+public class Employee {
+    private Department department;
+}
