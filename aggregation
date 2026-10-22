@@ -1,0 +1,13 @@
+class Student:
+    def __init__(self, name):
+        self.name = name
+
+class Classroom:
+    def __init__(self, room_number):
+        self.room_number = room_number
+        self.students = []  # List of Student objects
+
+    def add_student(self, student):
+        self.students.append(student)
+
+# Students can exist even if the Classroom is destroyed
